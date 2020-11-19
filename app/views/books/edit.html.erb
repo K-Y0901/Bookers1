@@ -1,5 +1,8 @@
 <head>Editing Book</head>
 
+<% @book.errors.full_messages.each do |message| %>
+<%= message %>
+<% end %>
 
 <%= form_with model:@book, local:true do |f| %>
   <h4>Title</h4>
